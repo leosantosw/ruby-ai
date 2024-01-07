@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require_relative './app/controllers/api_controller'
+require './app/controllers/api_controller'
 
 class App < Sinatra::Base
   use ApiController
