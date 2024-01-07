@@ -1,5 +1,8 @@
-require 'sinatra'
+require 'sinatra/base'
+require './app/controllers/api_controller'
 
-get '/' do
-    'Hello world!'
+class App < Sinatra::Base
+  use ApiController
 end
+
+App.run! if $PROGRAM_NAME == __FILE__
